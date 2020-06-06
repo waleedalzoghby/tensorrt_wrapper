@@ -229,7 +229,7 @@ namespace Tn
         mTrtContext->execute(batchSize, &mTrtCudaBuffer[inputIndex]);
         auto t_end = std::chrono::high_resolution_clock::now();
         float total = std::chrono::duration<float, std::milli>(t_end - t_start).count();
-        std::cout << "Time taken for inference is " << total << " ms." << std::endl;
+        // std::cout << "Time taken for inference is " << total << " ms." << std::endl;
 
         for (size_t bindingIdx = mTrtInputCount; bindingIdx < mTrtBindBufferSize.size(); ++bindingIdx)
         {
